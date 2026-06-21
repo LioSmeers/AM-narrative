@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -42,27 +43,29 @@
 
     <section class="camera-story" aria-label="Filmische werkwijze">
       <div class="camera-stage">
-        <button class="camera-trigger" type="button" aria-label="Bekijk foto's in de camera">
-          <span class="camera-device">
-            <span class="camera-screen" aria-hidden="true">
-              <img class="screen-image active" src="assets/logo/am-logo-blue.png" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/001.jpg" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/002.jpg" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/004.jpg" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/006.jpg" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/008.jpg" alt="">
-              <img class="screen-image" src="assets/projects/het-menneke/017.jpg" alt="">
-            </span>
-            <img class="camera-shell" src="assets/media/camera-display-frame.jpg" alt="Camera van achteren met leeg scherm">
-            <span class="camera-local-flash" aria-hidden="true"></span>
-          </span>
-        </button>
+        <model-viewer
+          class="camera-model"
+          src="assets/models/camera.glb"
+          alt="3D camera"
+          camera-controls
+          disable-zoom
+          interaction-prompt="none"
+          shadow-intensity="0.55"
+          exposure="1"
+          camera-orbit="-35deg 68deg 104%"
+          min-camera-orbit="auto auto 104%"
+          max-camera-orbit="auto auto 132%"
+          field-of-view="31deg"
+          min-field-of-view="31deg"
+          max-field-of-view="31deg"
+          ar>
+        </model-viewer>
       </div>
       <div class="camera-copy">
         <article>
-          <p class="eyebrow">In camera</p>
-          <h2>Elke klik opent een nieuw beeld in het scherm.</h2>
-          <p>Start met het AM-logo, klik door de reeks van Het Menneke en laat de beelden letterlijk in de camera verschijnen.</p>
+          <p class="eyebrow">In beeld</p>
+          <h2>Een camera die meteen filmisch binnenkomt.</h2>
+          <p>Het 3D-model laadt rechtstreeks in de website en draait kort in beeld, zodat de camera zelf het eerste visuele moment wordt.</p>
         </article>
       </div>
     </section>

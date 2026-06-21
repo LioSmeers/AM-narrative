@@ -2,9 +2,7 @@ const internalLinks = document.querySelectorAll('a[href$=".html"], a[href="/"], 
 const revealTargets = document.querySelectorAll(
   ".camera-stage, .intro-section > *, .service-grid article, .page-hero, .portfolio-item, .split-page > *, .values article, .contact-layout > *"
 );
-const cameraTrigger = document.querySelector(".camera-trigger");
-const screenImages = document.querySelectorAll(".screen-image");
-let screenIndex = 0;
+const cameraModel = document.querySelector(".camera-model");
 
 revealTargets.forEach((target) => {
   target.classList.add("scroll-reveal");
@@ -24,20 +22,25 @@ const revealObserver = new IntersectionObserver(
 
 revealTargets.forEach((target) => revealObserver.observe(target));
 
-if (cameraTrigger && screenImages.length) {
-  cameraTrigger.addEventListener("click", () => {
-    cameraTrigger.classList.remove("is-flashing");
-    void cameraTrigger.offsetWidth;
-    cameraTrigger.classList.add("is-flashing");
+if (cameraModel) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    screenImages[screenIndex].classList.remove("active");
-    screenIndex = (screenIndex + 1) % screenImages.length;
-    screenImages[screenIndex].classList.add("active");
+  cameraModel.addEventListener(
+    "load",
+    () => {
+      if (reduceMotion) {
+        return;
+      }
 
-    window.setTimeout(() => {
-      cameraTrigger.classList.remove("is-flashing");
-    }, 520);
-  });
+      cameraModel.autoRotate = true;
+      cameraModel.rotationPerSecond = "30deg";
+
+      window.setTimeout(() => {
+        cameraModel.autoRotate = false;
+      }, 6000);
+    },
+    { once: true }
+  );
 }
 
 internalLinks.forEach((link) => {
