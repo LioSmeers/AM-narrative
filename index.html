@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AM Narrative</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AM Narrative maakt film en fotografie met een rustige, verhalende beeldtaal.">
+  <title>AM Narrative | Film & Fotografie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="AM Narrative home">
+      <img src="assets/logo/am-logo-blue.png" alt="AM Narrative logo">
+    </a>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      <a class="active" href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="over-mij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-mark">
+        <img src="assets/logo/am-logo-blue.png" alt="">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Film & fotografie</p>
+        <h1>Visuele verhalen met gevoel voor <span>stilte</span>, licht en karakter.</h1>
+        <p class="lead">AM Narrative legt momenten vast die echt aanvoelen: van intieme portretten tot merkverhalen, evenementen en filmische reportages.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="portfolio.html">Bekijk werk</a>
+          <a class="button button-outline" href="contact.html">Plan een gesprek</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="camera-story" aria-label="Filmische werkwijze">
+      <div class="camera-stage">
+        <button class="camera-trigger" type="button" aria-label="Bekijk foto's in de camera">
+          <span class="camera-device">
+            <span class="camera-screen" aria-hidden="true">
+              <img class="screen-image active" src="assets/logo/am-logo-blue.png" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/001.jpg" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/002.jpg" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/004.jpg" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/006.jpg" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/008.jpg" alt="">
+              <img class="screen-image" src="assets/projects/het-menneke/017.jpg" alt="">
+            </span>
+            <img class="camera-shell" src="assets/media/camera-display-frame.jpg" alt="Camera van achteren met leeg scherm">
+            <span class="camera-local-flash" aria-hidden="true"></span>
+          </span>
+        </button>
+      </div>
+      <div class="camera-copy">
+        <article>
+          <p class="eyebrow">In camera</p>
+          <h2>Elke klik opent een nieuw beeld in het scherm.</h2>
+          <p>Start met het AM-logo, klik door de reeks van Het Menneke en laat de beelden letterlijk in de camera verschijnen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div>
+        <p class="eyebrow">Aanpak</p>
+        <h2>Beelden die niet schreeuwen, maar <span>blijven hangen.</span></h2>
+      </div>
+      <p>Elke opdracht begint met het verhaal achter de persoon, plek of onderneming. Daarna volgt een visuele aanpak die rustig, menselijk en doelgericht is.</p>
+    </section>
+
+    <section class="service-grid" aria-label="Diensten">
+      <article>
+        <span>01</span>
+        <h3>Brand films</h3>
+        <p>Korte films voor merken, ondernemers en makers die hun verhaal helder en stijlvol willen vertellen.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Fotografie</h3>
+        <p>Portretten, events en campagnebeelden met aandacht voor natuurlijk licht en authentieke momenten.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Social content</h3>
+        <p>Beeldreeksen en korte edits voor websites, campagnes en social media, afgestemd op jouw merkritme.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AM Narrative</p>
+    <a href="mailto:hello@amnarrative.com">hello@amnarrative.com</a>
+  </footer>
 </body>
 </html>

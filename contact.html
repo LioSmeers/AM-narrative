@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neem contact op met AM Narrative voor film en fotografie.">
+  <title>Contact | AM Narrative</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="AM Narrative home">
+      <img src="assets/logo/am-logo-blue.png" alt="AM Narrative logo">
+    </a>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="over-mij.html">Over mij</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-layout">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Vertel kort wat je wilt maken. Dan kijken we samen naar de <span>vorm.</span></h1>
+        <p class="lead">Gebruik deze pagina als eerste contactpunt. De velden kunnen later worden gekoppeld aan mail, Formspree of een CMS.</p>
+      </div>
+
+      <form class="contact-form" action="mailto:hello@amnarrative.com" method="post" enctype="text/plain">
+        <label>
+          Naam
+          <input type="text" name="naam" autocomplete="name" required>
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Type opdracht
+          <select name="opdracht">
+            <option>Film</option>
+            <option>Fotografie</option>
+            <option>Film en fotografie</option>
+            <option>Nog niet zeker</option>
+          </select>
+        </label>
+        <label>
+          Bericht
+          <textarea name="bericht" rows="6" required></textarea>
+        </label>
+        <button class="button button-dark" type="submit">Verstuur aanvraag</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AM Narrative</p>
+    <a href="mailto:hello@amnarrative.com">hello@amnarrative.com</a>
+  </footer>
+</body>
+</html>
